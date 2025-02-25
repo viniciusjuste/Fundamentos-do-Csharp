@@ -2,19 +2,19 @@
 {
     private static void Main(string[] args)
     {
-        MeuMetodo();
-        Console.WriteLine(RetornaNome("Vinicius"));
-        string nome = RetornaNome("Joao");
-        Console.WriteLine(nome);
+        var arr = new string[2];
+        arr[0] = "Item 1";
+
+        var arr2 = arr;
+
+
+        Console.WriteLine(arr[0]);
+        Console.WriteLine(arr2[0]);
+
+        arr[0] = "Item 2";
+
+        Console.WriteLine(arr[0]);
+        Console.WriteLine(arr2[0]);
     }
 
-    static void MeuMetodo()
-    {
-        Console.WriteLine("Meu Metodo");
-    }
-
-    static string RetornaNome(string nome, int idade = 0)
-    {
-        return nome;
-    }
 }
