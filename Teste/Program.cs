@@ -17,9 +17,15 @@
         // inteiro = Convert.ToInt32(real);
         // Console.WriteLine(inteiro);
 
-        float nota1 = 5.5f;
-        float nota2 = 6.5f;
-        float media = (nota1 + nota2) / 2;
-        Console.WriteLine($"Meedia: {media}");
+        // float nota1 = 5.5f;
+        // float nota2 = 6.5f;
+        // float media = (nota1 + nota2) / 2;
+        // Console.WriteLine($"Meedia: {media}");
+
+        static void MeuMetodo(){
+            Console.WriteLine("Meu primeiro meetodo");
+        }
+
+        MeuMetodo();
     }
 }
