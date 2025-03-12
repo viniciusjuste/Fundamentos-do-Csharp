@@ -5,13 +5,8 @@
         static void Main(string[] args)
         {
             var text = "Este texto é um teste";
-            // Console.WriteLine(text.CompareTo("Testando"));
-            // Console.WriteLine(text.Contains("teste", StringComparison.OrdinalIgnoreCase));
-
-            //  Console.WriteLine(text.StartsWith("Este", StringComparison.OrdinalIgnoreCase));
-            //  Console.WriteLine(text.EndsWith("teste", StringComparison.OrdinalIgnoreCase));
-
-            Console.WriteLine(text.Equals("Este texto é um teste", StringComparison.OrdinalIgnoreCase));
+            Console.WriteLine(text.IndexOf("é"));
+            Console.WriteLine(text.LastIndexOf("s"));
         }
     }
 }
