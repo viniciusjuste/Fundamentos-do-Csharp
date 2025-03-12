@@ -4,10 +4,9 @@
     {
         static void Main(string[] args)
         {
-            var price = 10.2;
-            // var text = "O preço do produto é: " + price + " reais";
-            // var text = string.Format("O preço do produto é: {0} reais", price);
-            var text = $"O preço do produto é: {price} reais";
+            var text = "Este texto é um teste";
+            // Console.WriteLine(text.CompareTo("Testando"));
+            Console.WriteLine(text.Contains("teste", StringComparison.OrdinalIgnoreCase));
         }
     }
 }
