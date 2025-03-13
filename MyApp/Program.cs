@@ -5,11 +5,13 @@
         static void Main(string[] args)
         {
             var text = "Este texto é um teste";
-            Console.WriteLine(text.ToLower());
-            Console.WriteLine(text.ToUpper());
-            Console.WriteLine(text.Insert(5, "Aqui "));
-            Console.WriteLine(text.Remove(5, 5));
-            Console.WriteLine(text.Length);
+            Console.WriteLine(text.Replace("Este", "Isto"));
+
+            var split = text.Split(' ');
+            Console.WriteLine(split[0]);
+
+            var result = text.Substring(16, 5);
+            Console.WriteLine(result);
         }
     }
 }
