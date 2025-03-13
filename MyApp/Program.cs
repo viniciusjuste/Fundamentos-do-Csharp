@@ -1,17 +1,19 @@
-﻿namespace Name
+﻿using System.Text;
+
+namespace Name
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var text = "Este texto é um teste";
-            Console.WriteLine(text.Replace("Este", "Isto"));
+            var text = new StringBuilder();
+            text.Append("Este texto é um teste");
+            text.Append("Este texto é um teste");
+            text.Append("Este texto é um teste");
+            text.Append("Este texto é um teste");
+            text.Append("Este texto é um teste");
 
-            var split = text.Split(' ');
-            Console.WriteLine(split[0]);
-
-            var result = text.Substring(16, 5);
-            Console.WriteLine(result);
+            Console.WriteLine(text);
         }
     }
 }
