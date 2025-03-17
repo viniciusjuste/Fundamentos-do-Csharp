@@ -21,29 +21,30 @@ public static class Editor
         } while (Console.ReadKey().Key != ConsoleKey.Escape);
 
         Console.WriteLine("---------------------------");
-        Console.WriteLine("Deseja salvar o arquivo? ");
-        var response = Console.ReadLine();
+        Viewer.Show(file.ToString());
+        // Console.WriteLine("Deseja salvar o arquivo? ");
+        // var response = Console.ReadLine();
 
-        if (response.ToLower() == "sim")
-        {
-            Save(file.ToString());
-        }
-        else
-        {
-            System.Environment.Exit(0);
-        }
+        // if (response.ToLower() == "sim")
+        // {
+        //     Save(file.ToString());
+        // }
+        // else
+        // {
+        //     System.Environment.Exit(0);
+        // }
     }
 
-    public static void Save(string file)
-    {
-        var textToSave = file;
+    // public static void Save(string file)
+    // {
+    //     var textToSave = file;
 
-        Console.WriteLine("Digite o caminho para salvar o arquivo: ");
-        var path = Console.ReadLine();
+    //     Console.WriteLine("Digite o caminho para salvar o arquivo: ");
+    //     var path = Console.ReadLine();
 
-        using var fileWriter = new StreamWriter(path);
-        fileWriter.Write(textToSave);
+    //     using var fileWriter = new StreamWriter(path);
+    //     fileWriter.Write(textToSave);
 
-        Console.WriteLine($"Arquivo {path} salvo com sucesso.");
-    }
+    //     Console.WriteLine($"Arquivo {path} salvo com sucesso.");
+    // }
 }
