@@ -2,12 +2,24 @@
 {
     static void Main(string[] args)
     {
-        var date = DateTime.Now;
-        // var formato = string.Format("{0:s}", date);
-        // var formato = string.Format("{0:r}", date);
-        var formato = string.Format("{0:u}", date);
+        var data = DateTime.Now;
+
+        // data.AddDays(1);
+        // data.AddDays(-1);
+        // data.AddMonths(1);
+        // data.AddMonths(-1);
+        // data.AddYears(1);
+        // data.AddYears(-1);
+        // data.AddHours(1);
+        // data.AddHours(-1);
+        // data.AddMinutes(1);
+        // data.AddMinutes(-1);
+        // data.AddSeconds(1);
+        // data.AddSeconds(-1);
+        // data.AddMilliseconds(1);
+        // data.AddMilliseconds(-1);
 
         Console.Clear();
-        Console.WriteLine(formato);
+        Console.WriteLine(data);
     }
 }
