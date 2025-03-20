@@ -4,8 +4,13 @@
     {
         Console.Clear();
 
-      var timeSpan = new TimeSpan();
+        Console.WriteLine(DateTime.DaysInMonth(2025, 2));
+        Console.WriteLine(IsWeekend(DateTime.Now.DayOfWeek));
+        Console.WriteLine(DateTime.Now.IsDaylightSavingTime());
+    }
 
-      Console.WriteLine(timeSpan);
+    public static bool IsWeekend(DayOfWeek today)
+    {
+        return today == DayOfWeek.Saturday || today == DayOfWeek.Sunday;
     }
 }
