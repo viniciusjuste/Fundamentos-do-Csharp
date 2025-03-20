@@ -4,12 +4,24 @@
     {
         Console.Clear();
 
-        var pt = System.Globalization.CultureInfo.GetCultureInfo("pt-PT");
-        var br = System.Globalization.CultureInfo.GetCultureInfo("pt-BR");
-        var en = System.Globalization.CultureInfo.GetCultureInfo("en-US");
-        var de = System.Globalization.CultureInfo.GetCultureInfo("de-DE");
-        var current = System.Globalization.CultureInfo.CurrentCulture;
+        // var dateTime = DateTime.UtcNow;
+        // Console.WriteLine(dateTime);
+        // Console.WriteLine(dateTime.ToLocalTime());
 
-        Console.WriteLine(DateTime.Now.ToString("D", current));
+        // var timeZonaAustralia = TimeZoneInfo.FindSystemTimeZoneById("Pacific/Auckland");
+        // Console.WriteLine(timeZonaAustralia);
+
+        // var horaAustralia = TimeZoneInfo.ConvertTimeFromUtc(dateTime, timeZonaAustralia);
+        // Console.WriteLine(horaAustralia);
+
+        var timeZones = TimeZoneInfo.GetSystemTimeZones();
+
+        foreach (var timeZone in timeZones)
+        {
+            Console.WriteLine(timeZone);
+            Console.WriteLine(timeZone.Id);
+            Console.WriteLine(TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, timeZone));
+            Console.WriteLine("------------------");
+        }
     }
 }
