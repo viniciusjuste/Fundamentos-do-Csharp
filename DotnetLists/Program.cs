@@ -1,14 +1,14 @@
-﻿class Program
+﻿Console.Clear();
+
+var meuArray = new int[5] { 1, 2, 3, 4, 5 };
+string[] array = new string[5] { "A", "B", "C", "D", "E" };
+
+for (int i = 0; i < meuArray.Length; i++)
 {
-    static void Main(string[] args)
-    {
-        Console.Clear();
+    Console.WriteLine($"Posicao {i}: {meuArray[i]}");
+}
 
-      var meuArray = new int[5];
-      int[] array = new int[5];
-
-      meuArray[0] = 1;
-
-      Console.WriteLine(meuArray[0]);
-    }
+foreach (string item in array)
+{
+    Console.WriteLine(item);
 }
