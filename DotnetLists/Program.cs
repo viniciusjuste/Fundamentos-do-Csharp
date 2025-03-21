@@ -4,15 +4,17 @@ var array = new int[3];
 
 try
 {
-    for (int i = 0; i < 10; i++){
-    Console.WriteLine(array[i]);
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine(array[i]);
+    }
 }
-} catch (Exception ex)
+catch (Exception ex)
 {
-    Console.WriteLine(ex.Message);
+    Console.WriteLine("Ops, algo deu errado: " + ex.Message);
 }
-finally
-{
-    Console.WriteLine("Finally");
-}
+// finally
+// {
+//     Console.WriteLine("Finalizando a execucao");
+// }
 
