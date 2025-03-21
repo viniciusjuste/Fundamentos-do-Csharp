@@ -27,6 +27,11 @@ catch (Exception ex)
     Console.WriteLine("Ops, algo deu errado: " + ex.Message);
 }
 
+finally
+{
+    Console.WriteLine("Chegou ao fim");
+}
+
 
 static void Salvar(string texto)
 {
@@ -34,9 +39,11 @@ static void Salvar(string texto)
         throw new MinhaExceptions(DateTime.Now);
 }
 
-public class MinhaExceptions : Exception{
-    public MinhaExceptions(DateTime date){
+public class MinhaExceptions : Exception
+{
+    public MinhaExceptions(DateTime date)
+    {
         QuandoAconteceu = date;
     }
-public DateTime QuandoAconteceu { get; set; }
+    public DateTime QuandoAconteceu { get; set; }
 }
