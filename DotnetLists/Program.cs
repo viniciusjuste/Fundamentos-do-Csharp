@@ -4,22 +4,27 @@ var array = new int[3];
 
 try
 {
-    for (int i = 0; i < 10; i++)
-    {
-        Console.WriteLine(array[i]);
-    }
+    Salvar("");
 }
-catch (IndexOutOfRangeException ex){
+
+catch (ArgumentNullException ex)
+{
+    Console.WriteLine("Algo está errado com o texto: " + ex.Message);
+}
+
+catch (IndexOutOfRangeException ex)
+{
     Console.WriteLine("Não encontrou o indice: " + ex.Message);
 }
 
 catch (Exception ex)
 {
     Console.WriteLine("Ops, algo deu errado: " + ex.Message);
-    Console.WriteLine(ex.InnerException?.Message);
 }
-// finally
-// {
-//     Console.WriteLine("Finalizando a execucao");
-// }
 
+
+static void Salvar(string texto)
+{
+    if (string.IsNullOrEmpty(texto))
+        throw new ArgumentNullException("O texto precisa ser preenchido");
+}
