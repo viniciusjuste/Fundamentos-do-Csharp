@@ -12,6 +12,11 @@ catch (ArgumentNullException ex)
     Console.WriteLine("Algo está errado com o texto: " + ex.Message);
 }
 
+catch (MinhaExceptions ex)
+{
+    Console.WriteLine("Algo aconteceu: " + ex.QuandoAconteceu);
+}
+
 catch (IndexOutOfRangeException ex)
 {
     Console.WriteLine("Não encontrou o indice: " + ex.Message);
@@ -26,5 +31,12 @@ catch (Exception ex)
 static void Salvar(string texto)
 {
     if (string.IsNullOrEmpty(texto))
-        throw new ArgumentNullException("O texto precisa ser preenchido");
+        throw new MinhaExceptions(DateTime.Now);
+}
+
+public class MinhaExceptions : Exception{
+    public MinhaExceptions(DateTime date){
+        QuandoAconteceu = date;
+    }
+public DateTime QuandoAconteceu { get; set; }
 }
