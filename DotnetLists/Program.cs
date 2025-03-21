@@ -1,14 +1,18 @@
 ﻿Console.Clear();
 
-var meuArray = new int[5];
-var arrb = new int[5];
+var array = new int[3];
 
-arrb[0] = meuArray[0];
-
-meuArray[0] = 1;
-Console.WriteLine(arrb[0]);
-
-struct Funcionario
+try
 {
-    public int Id { get; set; }
+    for (int i = 0; i < 10; i++){
+    Console.WriteLine(array[i]);
 }
+} catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+finally
+{
+    Console.WriteLine("Finally");
+}
+
