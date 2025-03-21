@@ -1,23 +1,12 @@
 ﻿Console.Clear();
 
-var meuArray = new int[5] { 1, 2, 3, 4, 5 };
-string[] array = new string[5] { "A", "B", "C", "D", "E" };
-var funcionarios = new Funcionario[5];
+var meuArray = new int[5];
+var arrb = new int[5];
 
-for (int i = 0; i < meuArray.Length; i++)
-{
-    Console.WriteLine($"Posicao {i}: {meuArray[i]}");
-}
+arrb[0] = meuArray[0];
 
-foreach (string item in array)
-{
-    Console.WriteLine(item);
-}
-
-foreach (var funcionario in funcionarios)
-{
-    Console.WriteLine(funcionario.Id);
-}
+meuArray[0] = 1;
+Console.WriteLine(arrb[0]);
 
 struct Funcionario
 {
